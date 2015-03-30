@@ -40,7 +40,7 @@ var TaskListView = {
     this.$el.val("");
   },
   init: function(){
-    $el.on("keyup", this, this.keyUp);)
+    $el.on("keyup", this, this.keyUp);
   },
   createTask: function(){
     var taskData = $("#task").val();
