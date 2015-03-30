@@ -31,3 +31,24 @@ TaskView.prototype = {
     view.render();
   }
 }
+
+var TaskListView = {
+  $el: $("#task-form"),
+  keyUp: function(e){
+    if (e.keyCode != 13) { return };
+    this.createTask;
+    this.$el.val("");
+  },
+  init: function(){
+    $el.on("keyup", this, this.keyUp);)
+  },
+  createTask: function(){
+    var taskData = $("#task").val();
+    var taskModel = new Task(taskData);
+    new TaskView(taskModel).init();
+  }
+};
+
+t1 = new Task("clean up")
+v1 = new TaskView(t1);
+v1.init();
